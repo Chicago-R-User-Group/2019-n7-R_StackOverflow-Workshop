@@ -1,0 +1,152 @@
+---
+title: "R + StackOverflow Workshop"
+output:
+  html_document:
+    df_print: paged
+---
+
+<div style="float:right"><img src="r_so_workshop.png" width="200px" /></div>
+
+## <span style="color:#f48024">CRUG Meetup, August 20, 2019</span>
+
+#### Instructions
+1. Download the three StackOverflow query data sets (Posts, Users, Tags) as included below in seach section.
+2. Work with each other to answer guided questions in cells or add your own interesting insights using any `library` and analytical method.
+3. When completed, rename notebook and knit it to HTML in RStudio or command line: `Rscript -e 'library(rmarkdown); rmarkdown::render("my_group_notebook.Rmd")'`.
+4. Using Git, push completed .Rmd or HTML notebooks to "Group_Submissions" of CRUG repo: **[2019-n7-R_StackOverflow-Workshop](https://github.com/Chicago-R-User-Group/2019-n6-useR-2019-bRew-and-View)**.
+5. Volunteer to briefly present analyses and findings to full audience.
+
+---
+
+## <span style="color:#f48024">Posts</span>
+
+### <span style="color:#222426">R Q/A Posts</span>
+
+#### <span style="color:#222426">Data Explorer:</span> https://data.stackexchange.com/stackoverflow/query/1068739/r-answered-posts-since-2015
+
+---
+
+#### Google BigQuery - StackOverflow Dataset
+
+#### https://cloud.google.com/blog/products/gcp/google-bigquery-public-datasets-now-include-stack-overflow-q-a
+
+#### Query 
+```{sql eval=FALSE}
+SELECT p.id, p.creation_date, p.score,
+       p.view_count, p.owner_user_id, p.Title,
+       p.tags, p.answer_count,
+       CONCAT('https://stackoverflow.com/questions/', 
+              CAST(p.id AS STRING)) As url
+                       
+FROM `bigquery-public-data.stackoverflow.posts_questions` p
+
+WHERE p.tags LIKE '%<r>%'
+ORDER BY p.score DESC
+```
+
+#### Size ~ 50 MB, Data: ~300,000 obs, 9 cols
+
+```{r}
+g_url <- 'https://drive.google.com/uc?export=download&id=17ITsjBM8w2krLaOSyeThUpiCWPDTgJ2E'
+# download.file(g_url, "StackOverflow_R_Posts.csv")
+```
+
+```{r}
+posts_df <- read.csv("../StackOverflow_R_Posts.csv")
+head(posts_df, 10)
+```
+
+### <span style="color:#165CAA">Analyze, Graph, Test the Data!</span>
+
+### How do the aggregates (min, max, mean, median, sd) of scores, views, upvotes trend over time?
+
+```{r}
+#...
+```
+
+### Do views trend or correlate positively or negatively with question scores and/or answer count?
+
+```{r}
+#...
+```
+
+### How many unique askers have there been over time? Do askers ask multiple times across time or in short periods?
+
+```{r}
+#...
+```
+
+---
+
+## <span style="color:#f48024">**Users**</span>
+
+### <span style="color:#222426">R Gold, Silver, Bronze Badgeholders</span>
+#### <span style="color:#222426">Data Explorer:</span> https://data.stackexchange.com/stackoverflow/query/1068746
+
+```{r}
+# download.file("https://data.stackexchange.com/stackoverflow/csv/1320628", "StackOverflow_R_Users.csv")
+```
+
+```{r}
+users_df <- read.csv("../StackOverflow_R_Users.csv")
+head(users_df, 10)
+```
+
+### <span style="color:#165CAA">Analyze, Graph, Test the Data!</span>
+
+### How long does it take high rep users to win R bronze, silver, badges over time?
+
+```{r}
+#...
+```
+
+### Do reputation correlate with upvotes and downvotes?
+
+```{r}
+#...
+```
+
+### What continents or countries maintain most R badge holders?
+
+```{r}
+#...
+```
+---
+
+## <span style="color:#f48024">**Tags**</span>
+
+### <span style="color:#222426">R and Other Tags</span>
+#### <span style="color:#222426">Data Explorer:</span> https://data.stackexchange.com/stackoverflow/query/1068751/r-and-other-question-tags
+
+```{r}
+# download.file("https://data.stackexchange.com/stackoverflow/csv/1320660", "StackOverflow_R_Tags.csv")
+```
+
+```{r}
+tags_df <- read.csv("../StackOverflow_R_Tags.csv")
+head(tags_df, 10)
+```
+
+### <span style="color:#165CAA">Analyze, Graph, Test the Data!</span>
+
+### What are the top tags that appear along the main R tag?
+
+```{r}
+#...
+```
+
+### What are the trends of tag counts, score, views, answers over time?
+
+```{r}
+#...
+```
+
+### How do the popular framework, dplyr or data.table, trend with each other?
+
+```{r}
+#...
+```
+
+<br/>
+<br/>
+<br/>
