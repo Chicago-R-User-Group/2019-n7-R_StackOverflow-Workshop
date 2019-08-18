@@ -13,7 +13,7 @@ output:
 1. Download the three StackOverflow query data sets (Posts, Users, Tags) as included below in seach section.
 2. Work with each other to answer guided questions in cells or add your own interesting insights using any `library` and analytical method.
 3. When completed, rename notebook and knit it to HTML in RStudio or command line: `Rscript -e 'library(rmarkdown); rmarkdown::render("my_group_notebook.Rmd")'`.
-4. Using Git, push completed .Rmd or HTML notebooks to "Group_Submissions" of CRUG repo: **[2019-n7-R_StackOverflow-Workshop](https://github.com/Chicago-R-User-Group/2019-n6-useR-2019-bRew-and-View)**.
+4. Using Git, push completed .Rmd or HTML notebooks to "Group_Submissions" of CRUG repo: **[2019-n7-R_StackOverflow-Workshop](https://github.com/Chicago-R-User-Group/2019-n7-R_StackOverflow-Workshop)**.
 5. Volunteer to briefly present analyses and findings to full audience.
 
 ---
