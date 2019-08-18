@@ -1,6 +1,8 @@
 # 2019-n7-R_StackOverflow-Workshop
 Meetup held August 20, 2019 showcasing best practices and lessons learned of R Q/A posts on StackOverflow with group workshop to analyze R trends with API data.
 
+<img src="Group_Notebooks/r_so_workshop.png" width="200" title="workshop icon" alt="workshop icon">
+
 ## Parfait Gasana, recently awarded R gold badge holder, co-organizer and data analyst,
 Presents the ins and outs of StackOverflow with tips on how to ask and how to answer, then invites audience to analyze StackOverflow API data in groups across R posts, users, and tags.
 
