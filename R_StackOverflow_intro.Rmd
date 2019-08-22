@@ -18,7 +18,6 @@ library(RUGtools)
 - We are The Chicago R User Group launched in 2010!
 - Now reached 3,700 members, one of largest groups in world!
 - We have an R package, [RUGTools](https://justinmshea.github.io/RUGtools/)!
-- We have an R Shiny app, [CRUG Event App](https://parfaitg.shinyapps.io/CRUG_Attendance_App/)!
 
 ![](images/open_mic.png)
 
