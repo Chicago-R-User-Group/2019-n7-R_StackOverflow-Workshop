@@ -11,6 +11,7 @@ Presents the ins and outs of StackOverflow with tips on how to ask and how to an
 ## Adam Hogan, long-time CRUG member and financial data scientist
 Presents interesting StackOverflow trends including basic time series modeling, social network analysis, and simple NLP. Adam will then open with exercises for group workshop.
 
+- [Presentation Slides](AHogan_Slides.pdf)
 - [Counts Notebook](https://nbviewer.jupyter.org/github/Chicago-R-User-Group/2019-n7-R_StackOverflow-Workshop/blob/master/AHogan_counts.ipynb)
 - [NLP Notebook](https://nbviewer.jupyter.org/github/Chicago-R-User-Group/2019-n7-R_StackOverflow-Workshop/blob/master/AHogan_nlp.ipynb)
 - [Graph Notebook](https://nbviewer.jupyter.org/github/Chicago-R-User-Group/2019-n7-R_StackOverflow-Workshop/blob/master/AHogan_graph.ipynb)
